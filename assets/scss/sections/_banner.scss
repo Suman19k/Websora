@@ -1,0 +1,558 @@
+.ul-banner {
+    background: var(--ul-gradient);
+    color: var(--white);
+    padding: 0 15px;
+    padding-top: clamp(120px, 10.51vw, 200px);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding-bottom: clamp(0px, 26.96vw, 513px);
+
+    @include xxs {
+        padding-bottom: clamp(130px, 26.96vw, 513px);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url(../img/banner-bg-shape.svg) no-repeat center center/cover;
+        z-index: -1;
+        // opacity: 20%;
+        mix-blend-mode: multiply;
+    }
+
+    &-sub-title {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 999px;
+        padding: clamp(6px, 0.47vw, 9px) clamp(13px, 0.84vw, 16px);
+        display: inline-flex;
+        align-items: center;
+        font-weight: 700;
+        margin-bottom: clamp(7px, 0.63vw, 12px);
+
+        &::before {
+            content: "";
+            background: url(../img/banner-sub-title-icon.svg) no-repeat center center/cover;
+            display: inline-block;
+            width: clamp(15px, 1.05vw, 20px);
+            height: clamp(13px, 0.95vw, 18px);
+            margin-right: clamp(5px, 0.53vw, 10px);
+        }
+    }
+
+    &-title {
+        font-size: clamp(25px, 3.68vw, 70px);
+        color: var(--white);
+        font-weight: 800;
+        max-width: clamp(300px, 55.60vw, 1058px);
+        margin: auto;
+        margin-bottom: clamp(8px, 0.84vw, 16px);
+
+        @include sm {
+            max-width: 100%;
+        }
+    }
+
+    &-btn {
+        background-color: var(--white);
+        color: var(--ul-primary);
+        border-radius: 999px;
+        padding: 0 clamp(15px, 1.05vw, 20px);
+        height: clamp(36px, 2.42vw, 46px);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: clamp(5px, 0.53vw, 10px);
+
+        &:hover {
+            background-color: var(--ul-primary);
+            color: var(--white);
+        }
+
+        i {
+            font-size: clamp(9px, 0.63vw, 12px);
+        }
+    }
+
+    &-vectors {
+        img {
+            position: absolute;
+            z-index: 2;
+        }
+
+        .vector-1 {
+            left: clamp(350px, 37.62vw, 716px);
+            bottom: clamp(68px, 5.68vw, 108px);
+            max-width: clamp(88px, 9.35vw, 178px);
+
+            @include md {
+                display: none;
+            }
+        }
+
+        .vector-2 {
+            right: clamp(25px, 2.63vw, 50px);
+            bottom: clamp(15px, 12.09vw, 230px);
+            max-width: clamp(295px, 31.00vw, 590px);
+
+            @include md {
+                display: none;
+            }
+        }
+    }
+
+    &-slider-wrapper {
+        .swiper {
+            position: absolute;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        #ul-banner-slider-1 {
+            left: 0;
+            bottom: 0;
+            width: clamp(160px, 34.68vw, 660px);
+            clip-path: polygon(35.014% 0%, 98.457% 0%, 98.457% 0%, 98.832% 0.057%, 99.164% 0.218%, 99.447% 0.465%, 99.676% 0.783%, 99.843% 1.154%, 99.945% 1.563%, 99.975% 1.992%, 99.927% 2.426%, 99.795% 2.847%, 99.575% 3.239%, 30.829% 99.274%, 30.829% 99.274%, 30.74% 99.389%, 30.644% 99.493%, 30.542% 99.587%, 30.434% 99.669%, 30.322% 99.739%, 30.206% 99.797%, 30.086% 99.843%, 29.963% 99.876%, 29.838% 99.896%, 29.711% 99.903%, -29.581% 99.903%, -29.581% 99.903%, -29.95% 99.848%, -30.279% 99.691%, -30.56% 99.45%, -30.788% 99.14%, -30.958% 98.776%, -31.063% 98.375%, -31.099% 97.952%, -31.059% 97.523%, -30.938% 97.103%, -30.73% 96.709%, 33.865% 0.674%, 33.865% 0.674%, 33.955% 0.551%, 34.052% 0.44%, 34.156% 0.34%, 34.266% 0.252%, 34.382% 0.177%, 34.502% 0.114%, 34.626% 0.065%, 34.753% 0.029%, 34.882% 0.007%, 35.014% 0%);
+
+            img {
+                aspect-ratio: 660/517;
+            }
+        }
+
+        #ul-banner-slider-2 {
+            left: clamp(137px, 12.45vw, 237px);
+            bottom: 0;
+            width: clamp(160px, 36.57vw, 696px);
+            clip-path: polygon(44.741% 0%, 98.445% 0%, 98.445% 0%, 98.796% 0.083%, 99.108% 0.315%, 99.374% 0.674%, 99.591% 1.135%, 99.752% 1.676%, 99.851% 2.273%, 99.885% 2.902%, 99.847% 3.54%, 99.732% 4.164%, 99.534% 4.75%, 58.979% 98.859%, 58.979% 98.859%, 58.893% 99.041%, 58.801% 99.206%, 58.702% 99.354%, 58.598% 99.484%, 58.489% 99.595%, 58.375% 99.688%, 58.258% 99.761%, 58.138% 99.813%, 58.015% 99.845%, 57.89% 99.856%, 1.545% 99.856%, 1.545% 99.856%, 1.189% 99.771%, 0.874% 99.532%, 0.605% 99.164%, 0.389% 98.691%, 0.23% 98.139%, 0.134% 97.531%, 0.106% 96.893%, 0.152% 96.248%, 0.277% 95.622%, 0.487% 95.039%, 43.682% 0.93%, 43.682% 0.93%, 43.767% 0.76%, 43.858% 0.606%, 43.955% 0.468%, 44.056% 0.347%, 44.163% 0.243%, 44.273% 0.157%, 44.386% 0.089%, 44.502% 0.04%, 44.621% 0.01%, 44.741% 0%);
+
+            img {
+                aspect-ratio: 696/348;
+            }
+
+
+            @include md {
+                left: clamp(107px, 12.45vw, 237px);
+            }
+
+            @include sm {
+                width: clamp(160px, 52.57vw, 696px);
+            }
+
+            @include xs {
+                width: clamp(160px, 42.57vw, 696px);
+            }
+
+            @include xxs {
+                width: clamp(160px, 62.57vw, 696px);
+            }
+        }
+
+        #ul-banner-slider-3 {
+            right: clamp(180px, 20.23vw, 385px);
+            width: clamp(0px, 38.20vw, 727px);
+            clip-path: polygon(0.375% 94.473%, 33.15% 1.335%, 33.15% 1.335%, 33.232% 1.122%, 33.321% 0.928%, 33.416% 0.755%, 33.517% 0.602%, 33.623% 0.471%, 33.733% 0.362%, 33.847% 0.276%, 33.964% 0.214%, 34.084% 0.176%, 34.206% 0.163%, 98.62% 0.163%, 98.62% 0.163%, 98.955% 0.257%, 99.252% 0.519%, 99.506% 0.923%, 99.713% 1.444%, 99.868% 2.055%, 99.965% 2.729%, 99.999% 3.441%, 99.964% 4.165%, 99.857% 4.873%, 99.671% 5.54%, 66.574% 98.677%, 66.574% 98.677%, 66.492% 98.888%, 66.404% 99.08%, 66.309% 99.252%, 66.208% 99.403%, 66.103% 99.533%, 65.993% 99.64%, 65.88% 99.725%, 65.763% 99.787%, 65.644% 99.824%, 65.523% 99.837%, 1.43% 99.837%, 1.43% 99.837%, 1.096% 99.744%, 0.8% 99.483%, 0.546% 99.08%, 0.339% 98.561%, 0.184% 97.952%, 0.086% 97.28%, 0.052% 96.569%, 0.085% 95.847%, 0.191% 95.14%, 0.375% 94.473%);
+
+            img {
+                aspect-ratio: 727/306;
+            }
+
+            @include sm {
+                display: none;
+            }
+        }
+
+        #ul-banner-slider-4 {
+            right: 0;
+            width: clamp(263px, 31.16vw, 593px);
+            clip-path: polygon(0.505% 96.478%, 68.973% 0.705%, 68.973% 0.705%, 69.074% 0.576%, 69.182% 0.46%, 69.297% 0.355%, 69.418% 0.263%, 69.546% 0.184%, 69.678% 0.119%, 69.815% 0.068%, 69.955% 0.03%, 70.098% 0.008%, 70.243% 0%, 127.92% 0%, 127.92% 0%, 128.325% 0.058%, 128.686% 0.22%, 128.997% 0.47%, 129.25% 0.794%, 129.441% 1.173%, 129.563% 1.593%, 129.609% 2.038%, 129.573% 2.491%, 129.449% 2.936%, 129.231% 3.358%, 65.936% 99.131%, 65.936% 99.131%, 65.835% 99.27%, 65.726% 99.397%, 65.608% 99.51%, 65.483% 99.61%, 65.351% 99.696%, 65.214% 99.767%, 65.072% 99.823%, 64.926% 99.864%, 64.776% 99.889%, 64.625% 99.897%, 1.774% 99.897%, 1.774% 99.897%, 1.361% 99.837%, 0.995% 99.669%, 0.681% 99.41%, 0.427% 99.078%, 0.239% 98.688%, 0.123% 98.258%, 0.085% 97.805%, 0.132% 97.346%, 0.27% 96.898%, 0.505% 96.478%);
+
+            img {
+                aspect-ratio: 593/485;
+            }
+
+
+            @include xs {
+                width: clamp(193px, 21.16vw, 593px);
+            }
+
+            @include xxs {
+                display: none;
+            }
+        }
+
+        #ul-banner-slider-3,
+        #ul-banner-slider-4 {
+            bottom: clamp(78px, 8.30vw, 158px);
+
+            @include md {
+                bottom: 0;
+            }
+        }
+    }
+
+
+    &-stats {
+        display: flex;
+        position: absolute;
+        bottom: clamp(28px, 3.05vw, 58px);
+        right: 0;
+
+        @include lg {
+            position: static;
+            justify-content: center;
+            padding: 30px 15px;
+        }
+
+
+        @include sm {
+            flex-wrap: wrap;
+            gap: 20px 0;
+        }
+    }
+
+    &-stat {
+        text-align: left;
+        padding-right: clamp(30px, 3.42vw, 65px);
+        margin-right: clamp(30px, 3.42vw, 65px);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+        @include xxs {
+            padding-right: 10px;
+            margin-right: 10px;
+            flex-grow: 1;
+        }
+
+        &:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        &-number {
+            font-weight: 700;
+            font-size: clamp(20px, 1.26vw, 24px);
+            line-height: 0.7;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        &-text {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            gap: clamp(15px, 1.58vw, 30px);
+            visibility: hidden;
+            color: var(--white);
+
+            &:hover {
+                color: var(--black);
+
+                i {
+                    color: var(--black);
+                }
+            }
+
+            >* {
+                visibility: visible;
+            }
+
+            i {
+                width: clamp(42px, 2.73vw, 52px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 50%;
+                aspect-ratio: 1/1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+
+// index 2 banner style start
+.ul-banner-2-container {
+    --container-space-x: 30px;
+    max-width: calc(clamp(1100px, 71.15vw, 1354px) + var(--container-space-x));
+    padding-left: calc(var(--container-space-x) / 2);
+    padding-right: calc(var(--container-space-x) / 2);
+    margin: auto;
+}
+
+
+.ul-banner-2 {
+    background: url(../img/banner-2-bg.jpg) no-repeat center center/cover;
+    padding-top: clamp(36px, 5.57vw, 106px);
+    color: var(--white);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url(../img/banner-2-bg-shape.png) no-repeat center center/cover;
+        z-index: -1;
+    }
+
+    &-txt {
+        @include md {
+            padding: 65px 0 45px;
+        }
+    }
+
+    &-title {
+        font-weight: 800;
+        font-size: clamp(28px, 4.20vw, 80px);
+        margin-bottom: clamp(16px, 1.68vw, 32px);
+    }
+
+    &-descr {
+        font-weight: 500;
+        font-size: clamp(17px, 1.05vw, 20px);
+        margin-bottom: clamp(20px, 2.10vw, 40px);
+    }
+
+    &-btns {
+        display: flex;
+        gap: clamp(15px, 1.58vw, 30px);
+        flex-wrap: wrap;
+    }
+
+    &-btn {
+        &:nth-child(2) {
+            border: 1px solid var(--white);
+            background-color: transparent;
+            color: var(--white);
+
+            &:hover {
+                background-color: var(--white);
+                color: var(--ul-2-primary);
+            }
+        }
+    }
+
+    &-img {
+        position: relative;
+        z-index: 1;
+
+        @include md {
+            text-align: center;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: clamp(200px, 24.80vw, 472px);
+            aspect-ratio: 472/458;
+            background: url(../img/banner-2-bg.jpg) no-repeat center center/cover;
+            z-index: -1;
+            border-radius: 50%;
+            top: clamp(45px, 7.62vw, 145px);
+            left: 0;
+        }
+
+        &::after {
+            background: transparent;
+            border: 3px solid var(--white);
+            left: clamp(22px, 2.21vw, 42px);
+            top: clamp(20px, 6.31vw, 120px);
+            width: clamp(170px, 23.23vw, 442px);
+            aspect-ratio: 442/450;
+        }
+
+        img {
+            max-width: clamp(300px, 45.19vw, 860px);
+            aspect-ratio: 860/854;
+        }
+    }
+
+    &-stat {
+        display: flex;
+        align-items: center;
+        gap: clamp(11px, 1.16vw, 22px);
+        margin-top: clamp(30px, 3.68vw, 70px);
+        flex-wrap: wrap;
+
+        &-imgs {
+            img {
+                width: clamp(50px, 3.15vw, 60px);
+                aspect-ratio: 1/1;
+                background-color: #FF9A9A;
+                border-radius: 50%;
+                border: 2px solid var(--white);
+                margin-left: -12px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+            font-size: clamp(17px, 1.05vw, 20px);
+        }
+    }
+}
+
+
+// index 3 banner style start
+.ul-banner-3 {
+    color: var(--white);
+    padding: clamp(123px, 13.29vw, 253px) 0 clamp(165px, 10.77vw, 205px);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--ul-primary);
+        z-index: -2;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 65%, 0% 0%);
+
+        @include xl {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 75%, 0% 0%);
+        }
+
+        @include md {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%, 0% 0%);
+        }
+    }
+
+
+    &-container {
+        --container-space-x: 30px;
+        max-width: calc(clamp(1100px, 76.09vw, 1448px) + var(--container-space-x));
+        padding-left: calc(var(--container-space-x) / 2);
+        padding-right: calc(var(--container-space-x) / 2);
+        margin: auto;
+    }
+
+    &-txt {
+        @include md {
+            text-align: center;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        @include xs {
+            max-width: 100%;
+        }
+    }
+
+    &-title {
+        font-weight: 800;
+        font-size: clamp(30px, 3.36vw, 64px);
+    }
+
+    &-descr {
+        font-weight: 500;
+        font-size: clamp(17px, 1.05vw, 20px);
+        margin-bottom: clamp(21px, 2.15vw, 41px);
+    }
+
+    &-img {
+        display: flex;
+        justify-content: center;
+
+        img {
+            max-width: clamp(675px, 54.39vw, 1035px);
+
+            @include lg {
+                max-width: clamp(550px, 50.39vw, 1035px);
+            }
+
+            @include xs {
+                max-width: clamp(350px, 30.39vw, 1035px);
+            }
+        }
+    }
+
+    &-btn {
+        height: clamp(45px, 3.15vw, 60px);
+        border: 1px solid var(--white);
+        color: var(--white);
+        border-radius: 6px;
+        font-weight: 700;
+        font-size: clamp(17px, 1.05vw, 20px);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 clamp(15px, 1.58vw, 30px);
+
+        &:hover {
+            color: var(--ul-primary);
+            background-color: var(--white);
+        }
+    }
+
+    &-cutomers {
+        margin-top: clamp(22px, 2.73vw, 52px);
+        position: absolute;
+        max-width: clamp(320px, 63%, 63%);
+        bottom: 4px;
+
+        @include lg {
+            background-color: var(--white);
+            max-width: 100%;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        @include xxs {
+            padding-top: 20px;
+        }
+
+        &-title {
+            color: #666666;
+            font-weight: 600;
+            font-size: clamp(17px, 1.05vw, 20px);
+            display: block;
+            margin-bottom: clamp(20px, 2.89vw, 55px);
+        }
+    }
+
+    &-vectors {
+        >* {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .vector-1 {
+            top: 0;
+            left: 0;
+            max-width: clamp(275px, 29.01vw, 552px);
+        }
+
+        .vector-2 {
+            bottom: clamp(150px, 15.76vw, 300px);
+            right: clamp(425px, 44.67vw, 850px);
+            max-width: clamp(117px, 8.78vw, 167px);
+        }
+
+        .vector-3 {
+            right: 0;
+            top: clamp(66px, 5.73vw, 109px);
+            max-width: clamp(175px, 22.75vw, 433px);
+        }
+    }
+}

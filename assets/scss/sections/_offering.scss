@@ -1,0 +1,117 @@
+.ul-offerings {
+    background-color: var(--ul-black);
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: clamp(300px, 21.02vw, 400px);
+        aspect-ratio: 1/1;
+        background: var(--ul-primary);
+        opacity: 0.8;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        filter: blur(250px);
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: clamp(17px, 1.73vw, 33px);
+        z-index: -1;
+    }
+
+    .ul-section-heading {
+        .left {
+            width: 50%;
+
+            @include sm {
+                width: 60%;
+            }
+
+            @include xs {
+                width: 100%;
+            }
+        }
+    }
+
+    .ul-section-title {
+        color: var(--white);
+    }
+}
+
+
+.ul-offering {
+    padding: clamp(12px, 1.31vw, 25px);
+    padding-top: 0;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    z-index: 1;
+    --top-space: 30px;
+    margin-top: var(--top-space);
+
+    &:hover {
+
+        &::before,
+        &::after {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        .ul-offering-icon {
+            background: var(--ul-primary);
+            color: var(--white);
+        }
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: clamp(30px, 2.10vw, 40px);
+        aspect-ratio: 1/1;
+        background-color: var(--ul-primary);
+        z-index: -1;
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+
+    &::before {
+        top: -1px;
+        right: -1px;
+        border-top-right-radius: 20px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+        // transform: translate(37%, -37%);
+    }
+
+    &::after {
+        clip-path: polygon(100% 100%, 0 100%, 0 0);
+        border-bottom-left-radius: 20px;
+        bottom: -1px;
+        left: -1px;
+    }
+
+    &-icon {
+        width: clamp(55px, 3.68vw, 70px);
+        padding: 8px;
+        font-size: clamp(30px, 1.89vw, 36px);
+        aspect-ratio: 1/1;
+        background: linear-gradient(180deg, #3C72FC -210.71%, #00060C 100%);
+        color: var(--ul-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: calc(var(--top-space) * -1);
+        margin-bottom: clamp(12px, 1.26vw, 24px);
+        transition: 0.3s ease;
+    }
+
+    &-title {
+        font-family: var(--font-kumbh);
+        font-size: clamp(15px, 0.95vw, 18px);
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,79 @@
+.ul-app-ad {
+    --container-space-x: 30px;
+    max-width: calc(clamp(1000px, 69.36vw, 1320px) + var(--container-space-x));
+    padding-left: calc(var(--container-space-x) / 2);
+    padding-right: calc(var(--container-space-x) / 2);
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    padding-top: clamp(40px, 4.20vw, 80px);
+
+
+    @include lg {
+        margin: 0 15px;
+    }
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 774.91px;
+        height: 759.3px;
+        left: -340.07px;
+        top: -514.01px;
+        background: rgba(0, 101, 242, 0.2);
+        filter: blur(278.746px);
+    }
+
+    &-img {
+        text-align: center;
+
+        img {
+            aspect-ratio: 439/426;
+            max-width: clamp(341px, 23.17vw, 441px);
+
+            @include md {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &-txt {
+        margin-right: clamp(15px, 10.25vw, 195px);
+
+        .ul-2-section-descr {
+            margin-bottom: clamp(16px, 1.68vw, 32px);
+        }
+    }
+
+    &-btns {
+        display: flex;
+        gap: clamp(8px, 0.79vw, 15px);
+    }
+
+    &-vectors {
+        >* {
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .vector-1 {
+            left: 0;
+            aspect-ratio: 238/433;
+
+            @include sm {
+                display: none;
+            }
+        }
+
+        .vector-2 {
+            right: 0;
+        }
+    }
+}

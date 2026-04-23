@@ -1,0 +1,136 @@
+.ul-team-details {
+    &-img {
+        flex-shrink: 0;
+        border-radius: 20px;
+        overflow: hidden;
+        position: sticky;
+        top: clamp(85px, 6.04vw, 115px);
+        aspect-ratio: 470/543;
+        background: linear-gradient(180deg, #C700B1 0%, #3C72FC 100%);
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-name {
+        margin-bottom: clamp(10px, 1.00vw, 19px);
+    }
+
+    &-role {
+        font-weight: 600;
+        font-size: clamp(16px, 1.05vw, 20px);
+        color: var(--ul-c4);
+        margin-bottom: clamp(16px, 1.73vw, 33px);
+    }
+
+    &-descr {
+        font-size: clamp(13px, 0.84vw, 16px);
+        line-height: 1.6;
+        color: var(--ul-gray);
+        margin-bottom: clamp(15px, 1.58vw, 30px);
+    }
+
+    &-infos {
+        margin-bottom: clamp(18px, 1.68vw, 32px);
+    }
+
+    &-info {
+        margin-bottom: clamp(7px, 0.63vw, 12px);
+
+        &,
+        a {
+            font-size: clamp(13px, 0.84vw, 16px);
+            font-weight: 600;
+            color: var(--ul-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        a:hover {
+            color: var(--ul-primary);
+        }
+    }
+
+    &-socials {
+        display: flex;
+        gap: clamp(5px, 0.42vw, 8px);
+        font-weight: 500;
+        margin-bottom: clamp(17px, 1.79vw, 34px);
+
+        a {
+            color: var(--ul-c4);
+            font-size: clamp(13px, 0.84vw, 16px);
+            background-color: #F8F8F8;
+            width: clamp(36px, 2.31vw, 44px);
+            aspect-ratio: 1/1;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                color: var(--white);
+                background-color: var(--ul-primary);
+            }
+        }
+    }
+
+    &-experiences {
+        margin-bottom: clamp(24px, 2.84vw, 54px);
+
+        &-title {
+            font-weight: 600;
+            font-size: clamp(18px, 1.26vw, 24px);
+            color: var(--ul-c4);
+            margin-bottom: clamp(17px, 1.42vw, 27px);
+        }
+    }
+
+    &-experience {
+        margin-bottom: clamp(15px, 1.31vw, 25px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-title {
+            font-weight: 700;
+            color: var(--ul-c4);
+            margin-bottom: clamp(9px, 0.58vw, 11px);
+        }
+
+        .ul-progress-container {
+            background-color: rgba(43, 78, 255, 0.5);
+            border: none;
+            border-radius: 2px;
+        }
+
+        .ul-progressbar {
+            height: clamp(7px, 0.53vw, 10px);
+            border-radius: 2px;
+
+            &::before {
+                content: none;
+            }
+        }
+
+        .ul-progress-label {
+            font-weight: 700;
+            color: var(--ul-black);
+            font-size: clamp(13px, 0.84vw, 16px);
+        }
+    }
+
+    &-contact {
+        form {
+
+            input,
+            textarea {
+                background-color: #F5F6F7;
+            }
+        }
+    }
+}

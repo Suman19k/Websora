@@ -1,0 +1,193 @@
+.ul-work-process {
+    &-row {
+        --bs-gutter-x: clamp(49px, 5.20vw, 99px);
+        --bs-gutter-y: clamp(49px, 5.20vw, 99px);
+
+        >*:last-child {
+            .ul-work-process-single {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &-single {
+        text-align: center;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: clamp(30px, 3.15vw, 60px);
+            left: 100%;
+            background: url(../img/process-arrow.svg) no-repeat center center/contain;
+            width: clamp(52px, 3.78vw, 72px);
+            height: clamp(48px, 3.57vw, 68px);
+
+            @include sm {
+                content: none;
+            }
+        }
+
+        &-img {
+            position: relative;
+            margin-bottom: clamp(12px, 1.26vw, 24px);
+
+            img {
+                box-sizing: content-box;
+                border-radius: 999px;
+                width: clamp(126px, 8.20vw, 156px);
+                aspect-ratio: 1/1;
+                display: inline-block;
+                border: 2px dashed var(--ul-primary);
+                padding: clamp(5px, 0.53vw, 10px);
+            }
+        }
+
+        &-index {
+            color: var(--white);
+            background: linear-gradient(90deg, #3C72FC 0%, #C700B1 100%);
+            height: clamp(35px, 2.10vw, 40px);
+            aspect-ratio: 1/1;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(15px, 0.95vw, 18px);
+            position: absolute;
+            top: clamp(6px, 0.53vw, 10px);
+            left: 25%;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: clamp(20px, 1.26vw, 24px);
+            margin-bottom: clamp(8px, 0.89vw, 17px);
+        }
+
+        &-descr {
+            margin-bottom: 0;
+            color: var(--ul-gray);
+        }
+    }
+}
+
+
+// INDEX-2 How it works/ work process
+.ul-how-it-works {
+    background-color: #F5F6F7;
+    position: relative;
+    z-index: 1;
+
+    &-container {
+        --container-space-x: 30px;
+        max-width: calc(clamp(1000px, 69.36vw, 1320px) + var(--container-space-x));
+        padding-left: calc(var(--container-space-x) / 2);
+        padding-right: calc(var(--container-space-x) / 2);
+        margin: auto;
+    }
+
+    .ul-section-heading .left {
+        width: 55%;
+
+        @include sm {
+            width: 65%;
+        }
+
+        @include xs {
+            width: 100%;
+        }
+    }
+
+    &-list {
+        background-color: var(--white);
+        border-radius: 20px;
+        padding: clamp(19px, 2.00vw, 38px) clamp(20px, 2.10vw, 40px);
+        height: 100%;
+    }
+
+    &-item {
+        display: flex;
+        align-items: flex-start;
+        gap: clamp(10px, 1.05vw, 20px);
+        margin-bottom: clamp(12px, 1.26vw, 24px);
+
+        &:last-child {
+            margin-bottom: 0;
+
+            .ul-how-it-works-item-descr {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+
+        .icon {
+            width: clamp(54px, 3.89vw, 74px);
+            border: 1px solid var(--ul-primary);
+            color: var(--ul-primary);
+            border-radius: 50%;
+            flex-shrink: 0;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(25px, 1.73vw, 33px);
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: clamp(20px, 1.26vw, 24px);
+            margin-bottom: clamp(9px, 0.95vw, 18px);
+        }
+
+        &-descr {
+            font-weight: 500;
+            color: #565656;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            padding-bottom: clamp(8px, 0.84vw, 16px);
+            margin-bottom: 0;
+        }
+    }
+
+    &-imgs {
+        background-color: var(--white);
+        padding: clamp(17px, 1.79vw, 34px) clamp(15px, 1.31vw, 25px);
+        border-radius: 20px 0 0 20px;
+        margin-right: calc(0% - clamp(0px, 15.29vw, 291px));
+        padding-right: 0;
+
+        @include xxl {
+            margin-right: calc(0% - clamp(0px, 14.19vw, 291px));
+        }
+
+        @include xl {
+            margin-right: calc(0% - clamp(0px, 8.29vw, 291px));
+        }
+
+        @include lg {
+            margin-right: calc(0% - clamp(0px, 1.49vw, 291px));
+        }
+
+        @include md {
+            margin-right: calc(0% - clamp(0px, 1.59vw, 291px));
+        }
+
+        @include sm {
+            margin-right: 0;
+            border-radius: 20px;
+            padding: clamp(17px, 1.79vw, 34px) clamp(15px, 1.31vw, 25px);
+        }
+    }
+}
+
+.ul-faq-vector--2 .ul-faq-vector-inner,
+.ul-faq-vector--2::before,
+.ul-faq-vector--2::after {
+    bottom: auto;
+    top: 0;
+    left: 0;
+    right: auto;
+    border-top-left-radius: 0 !important;
+    border-bottom-right-radius: 999px !important;
+}

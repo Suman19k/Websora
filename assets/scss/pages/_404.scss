@@ -1,0 +1,14 @@
+.ul-404 {
+
+    &-img {
+        margin-bottom: clamp(20px, 2.63vw, 50px);
+
+        img {
+            max-width: clamp(200px, 33.00vw, 628px);
+        }
+    }
+
+    .ul-btn {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,19 @@
+.ul-clients-2 {
+    text-align: center;
+
+    &-container {
+        --container-space-x: 30px;
+        max-width: calc(clamp(1100px, 69.36vw, 1320px) + var(--container-space-x));
+        padding-left: calc(var(--container-space-x) / 2);
+        padding-right: calc(var(--container-space-x) / 2);
+        margin: auto;
+    }
+
+    &-title {
+        font-size: clamp(17px, 1.05vw, 20px);
+        font-weight: 600;
+        color: #666666;
+        margin-bottom: clamp(25px, 2.89vw, 55px);
+        display: inline-block;
+    }
+}

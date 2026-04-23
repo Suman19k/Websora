@@ -1,0 +1,116 @@
+.ul-solutions {
+    background: linear-gradient(90deg, #2B4DFF 0%, #2AD3F8 100%);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &-container {
+        --container-space-x: 30px;
+        max-width: calc(clamp(1100px, 69.36vw, 1320px) + var(--container-space-x));
+        padding-left: calc(var(--container-space-x) / 2);
+        padding-right: calc(var(--container-space-x) / 2);
+        margin: auto;
+    }
+
+    &-img {
+        position: relative;
+        width: max-content;
+        max-width: 100%;
+
+        .main-img {
+            border-radius: 10px;
+            max-width: clamp(415px, 27.06vw, 515px);
+
+            @include lg {
+                max-width: clamp(360px, 27.06vw, 515px);
+            }
+
+            @include xxs {
+                max-width: clamp(290px, 27.06vw, 515px);
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        &-2 {
+            position: absolute;
+            bottom: calc(0% - clamp(65px, 7.62vw, 145px));
+            right: calc(0% - clamp(165px, 13.93vw, 265px));
+            max-width: clamp(378px, 28.27vw, 538px);
+
+            @include xxs {
+                right: -60px;
+            }
+        }
+    }
+
+    &-txt {
+        color: var(--white);
+
+        .ul-faq-2-list {
+            padding: 0;
+            border: none;
+            margin-bottom: clamp(20px, 2.10vw, 40px);
+            flex-wrap: wrap;
+
+            li {
+                font-size: clamp(16px, 1.05vw, 20px);
+
+                &::before {
+                    color: var(--white);
+                    background: none;
+                    content: "\f136";
+                    font-family: flaticon_Websora !important;
+                    font-style: normal;
+                    font-weight: normal !important;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
+        }
+
+        .ul-2-btn {
+            background-color: var(--white);
+            color: var(--ul-primary);
+
+            &:hover {
+                background-color: var(--ul-primary);
+                color: var(--white);
+            }
+        }
+    }
+
+    .ul-2-section-sub-title,
+    .ul-2-section-title,
+    .ul-2-section-descr {
+        color: var(--white);
+    }
+
+    .ul-faq-vector-inner,
+    .ul-faq-vector::before,
+    .ul-faq-vector::after {
+        top: 0;
+        left: 0;
+        bottom: auto;
+        right: auto;
+        border-radius: 0;
+        border-bottom-right-radius: 999px;
+        background: var(--white);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 40%;
+        right: 0;
+        transform: translateX(60%);
+        width: clamp(222px, 17.50vw, 333px);
+        aspect-ratio: 1/1;
+        border: clamp(50px, 3.68vw, 70px) solid var(--white);
+        border-radius: 999px;
+        opacity: 20%;
+    }
+}

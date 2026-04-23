@@ -1,0 +1,56 @@
+.ul-inner-faq {
+    .ul-single-accordion-item {
+        box-shadow: none;
+        border-bottom: 1px solid rgba(86, 86, 86, 0.3);
+        border-radius: 0;
+        padding: clamp(17px, 1.42vw, 27px) 0;
+        margin-bottom: 0;
+
+        &:first-child {
+            border-top: 1px solid rgba(86, 86, 86, 0.3);
+
+        }
+
+        &__title {
+            font-weight: 700;
+            color: var(--ul-c4);
+            font-size: clamp(18px, 1.26vw, 24px);
+        }
+
+        &__body p {
+            line-height: 1.7;
+        }
+
+        &.open {
+            .ul-single-accordion-item {
+                &__header i {
+                    transform: rotate(45deg);
+                    color: var(--ul-c4);
+                }
+
+                &__title {
+                    color: var(--ul-c4);
+                }
+            }
+        }
+    }
+}
+
+.ul-faq-cta {
+    max-width: 590px;
+    text-align: center;
+    margin: auto;
+
+    .ul-section-title {
+        margin-bottom: clamp(8px, 0.74vw, 14px);
+    }
+
+    &-descr {
+        color: var(--ul-gray);
+        margin-bottom: clamp(18px, 1.89vw, 36px);
+    }
+
+    .ul-btn {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,170 @@
+.ul-service-details {
+    &-sidebar {
+        &-links {
+            margin-bottom: clamp(20px, 2.10vw, 40px);
+
+            li:last-child a {
+                margin-bottom: 0;
+            }
+
+            a {
+                background-color: #F5F6F7;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: clamp(10px, 0.84vw, 16px) clamp(14px, 1.05vw, 20px);
+                border-radius: 999px;
+                position: relative;
+                z-index: 1;
+                font-weight: 700;
+                color: var(--ul-c4);
+                margin-bottom: clamp(7px, 0.74vw, 14px);
+
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(90deg, #2B4DFF 0%, #C700B1 100%);
+                    border-radius: 999px;
+                    z-index: -1;
+                    opacity: 0;
+                    transition: 0.3s ease;
+                }
+
+                &:hover,
+                &.active {
+                    color: var(--white);
+
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+
+                i {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        &-cta {
+            background: linear-gradient(323deg, #3C72FC 0%, #C700B1 100%);
+            border-radius: 16px;
+            text-align: center;
+            padding: clamp(20px, 2.10vw, 40px) clamp(15px, 1.58vw, 30px);
+
+            &-icon {
+                background-color: rgba(255, 255, 255, 0.1);
+                aspect-ratio: 1/1;
+                border-radius: 10px;
+                max-width: clamp(50px, 4.73vw, 90px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: clamp(38px, 2.52vw, 48px);
+                color: var(--white);
+                margin: auto;
+                margin-bottom: clamp(16px, 1.37vw, 26px);
+            }
+
+            &-title {
+                font-size: clamp(25px, 1.89vw, 36px);
+                color: var(--white);
+                font-weight: 600;
+                margin-bottom: clamp(4px, 0.21vw, 4px);
+            }
+
+            &-descr {
+                color: #F5F6F7;
+                font-weight: 300;
+                margin-bottom: clamp(18px, 1.89vw, 36px);
+            }
+
+            &-btn {
+                background-color: var(--ul-c4);
+                height: clamp(44px, 2.84vw, 54px);
+                border-radius: 999px;
+                color: var(--white);
+                display: inline-flex;
+                align-items: center;
+                gap: clamp(5px, 0.42vw, 8px);
+                justify-content: center;
+                padding: 0 clamp(12px, 1.05vw, 20px);
+                font-weight: 700;
+
+                i {
+                    font-size: 12px;
+                }
+
+                &:hover {
+                    background-color: var(--white);
+                }
+            }
+        }
+    }
+
+    &-img {
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: clamp(27px, 3.52vw, 67px);
+        margin-bottom: clamp(25px, 2.63vw, 50px);
+
+        img {
+            aspect-ratio: 770/500;
+        }
+    }
+
+    &-txt {
+        max-width: clamp(750px, 48.87vw, 930px);
+        margin: auto;
+    }
+
+    &-title,
+    &-txt h2 {
+        font-weight: 800;
+        font-size: clamp(25px, 2.10vw, 40px);
+        color: var(--ul-c4);
+        margin-bottom: clamp(7px, 0.74vw, 14px);
+    }
+
+    &-descr,
+    &-txt p {
+        font-size: clamp(13px, 0.84vw, 16px);
+        color: var(--ul-gray);
+        font-weight: 400;
+    }
+
+    &-inner-title,
+    &-txt h3 {
+        font-weight: 700;
+        font-size: clamp(18px, 1.26vw, 24px);
+        margin-bottom: clamp(10px, 1.05vw, 20px);
+        margin-top: clamp(18px, 1.84vw, 35px);
+        color: var(--ul-c4);
+    }
+
+    &-txt ul {
+        margin-top: clamp(15px, 1.58vw, 30px);
+
+        li {
+            margin-bottom: clamp(10px, 1.05vw, 20px);
+            font-weight: 600;
+            display: flex;
+            align-items: baseline;
+            gap: clamp(7px, 0.53vw, 10px);
+
+            &::before {
+                content: "\f122";
+                font-family: flaticon_Websora !important;
+                font-style: normal;
+                font-weight: normal !important;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                display: block;
+            }
+        }
+    }
+}

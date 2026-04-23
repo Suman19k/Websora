@@ -1,0 +1,111 @@
+.ul-features {
+    background-color: #FAF8FF;
+    border-radius: clamp(25px, 2.63vw, 50px);
+    margin: 0 clamp(15px, 2.63vw, 50px);
+
+    &-container {
+        --container-space-x: 30px;
+        max-width: calc(clamp(1070px, 82.50vw, 1570px) + var(--container-space-x));
+        padding-left: calc(var(--container-space-x) / 2);
+        padding-right: calc(var(--container-space-x) / 2);
+        margin: auto;
+    }
+
+    .ul-2-section-descr {
+        color: #565656;
+        max-width: 816px;
+    }
+
+    &-grid .row .col:nth-child(even) {
+        .ul-service {
+            background: linear-gradient(180deg, #3C72FC 0%, #C700B1 100%);
+        }
+    }
+}
+
+
+// INDEX 3 FEATURES STYLES
+.ul-features-2 {
+    .ul-section-heading {
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.ul-features-2-container {
+    --container-space-x: 30px;
+    max-width: calc(clamp(0px, 93.01vw, 1770px) + var(--container-space-x));
+    padding-left: calc(var(--container-space-x) / 2);
+    padding-right: calc(var(--container-space-x) / 2);
+    margin: auto;
+}
+
+.ul-feature-2 {
+    --card-theme: #6B00BD;
+    border: 1px solid var(--card-theme);
+    padding: clamp(15px, 1.58vw, 30px);
+    border-radius: clamp(15px, 1.05vw, 20px);
+    transition: 0.3s ease;
+
+    &:hover {
+        background-color: var(--card-theme);
+
+        .ul-feature-2-title {
+            color: var(--white);
+        }
+
+        .ul-feature-2-descr {
+            color: var(--white);
+        }
+    }
+
+    &-icon {
+        aspect-ratio: 1/1;
+        width: clamp(96px, 6.10vw, 116px);
+        background-color: var(--white);
+        border-radius: 10px;
+        border: 1px solid rgba(107, 0, 189, 0.2);
+        color: var(--card-theme);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(45px, 3.15vw, 60px);
+        margin-bottom: clamp(14px, 1.26vw, 24px);
+    }
+
+    &-title {
+        font-weight: 700;
+        font-size: clamp(20px, 1.26vw, 24px);
+        margin-bottom: clamp(8px, 0.95vw, 18px);
+    }
+
+    &-descr {
+        color: #585B6F;
+        margin-bottom: 0;
+    }
+
+    &--2 {
+        --card-theme: #FFA319;
+
+        .ul-feature-2-icon {
+            border-color: rgba(255, 163, 25, 0.2);
+        }
+    }
+
+    &--3 {
+        --card-theme: #55FF9E;
+
+        .ul-feature-2-icon {
+            border-color: rgba(85, 255, 159, 0.2);
+        }
+    }
+
+    &--4 {
+        --card-theme: #3996FF;
+
+        .ul-feature-2-icon {
+            border-color: rgba(57, 149, 255, 0.2);
+        }
+    }
+}

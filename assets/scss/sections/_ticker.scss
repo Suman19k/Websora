@@ -1,0 +1,36 @@
+.ul-ticker {
+    background-color: var(--ul-c3);
+    padding: clamp(8px, 0.68vw, 13px) 0;
+
+    .splide__slide {
+        width: max-content !important;
+        margin-right: clamp(10px, 1.05vw, 20px);
+
+        &:nth-child(odd) {
+            p {
+                color: var(--ul-primary);
+            }
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+        font-weight: 700;
+        color: var(--ul-black);
+        font-size: clamp(17px, 1.05vw, 20px);
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: clamp(10px, 1.05vw, 20px);
+        flex-shrink: 0;
+        min-width: max-content;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 19px;
+            height: 20px;
+            background: url(../img/ticker-divider.svg) no-repeat center center;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.ul-team {
+    &-member {
+        background: linear-gradient(180deg, #C700B1 0%, #3C72FC 100%);
+        border-radius: 20px;
+        overflow: hidden;
+        border-radius: clamp(15px, 1.05vw, 20px);
+        text-align: center;
+        transition: 0.4s ease;
+        position: relative;
+        aspect-ratio: 270/312;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 1px;
+            bottom: 1px;
+            height: calc(100% - 2px);
+            width: calc(100% - 2px);
+            background-color: var(--white);
+            border-radius: clamp(15px, 1.05vw, 20px);
+            transition: 0.4s ease;
+        }
+
+        &:hover {
+            &::before {
+                height: 0%;
+            }
+
+            .ul-team-member-socials {
+                opacity: 1;
+                pointer-events: all;
+                transform: translateX(0);
+            }
+
+            .ul-team-member-txt {
+                transform: translateY(0%);
+            }
+        }
+
+        &-img {
+            position: relative;
+
+            img {
+                aspect-ratio: 270/312;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &-socials {
+            position: absolute;
+            top: clamp(8px, 0.84vw, 16px);
+            right: 0;
+            transform: translateX(100%);
+            display: flex;
+            flex-direction: column;
+            background-color: var(--white);
+            gap: clamp(5px, 0.42vw, 8px);
+            border-radius: 999px 0 0 999px;
+            padding: 12px 0;
+            padding-left: clamp(10px, 0.74vw, 14px);
+            padding-right: clamp(4px, 0.37vw, 7px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+
+
+            a {
+                color: var(--ul-primary);
+                font-size: clamp(16px, 1.16vw, 22px);
+
+                &:hover {
+                    border-color: var(--ul-primary);
+                    color: var(--ul-black);
+                }
+            }
+        }
+
+        &-txt {
+            padding: clamp(16px, 1.16vw, 22px) 0;
+            position: absolute;
+            bottom: 0;
+            background-color: var(--ul-primary);
+            width: 100%;
+            transform: translateY(100%);
+            transition: 0.3s ease;
+        }
+
+        &-name {
+            margin-bottom: 4px;
+            font-size: clamp(17px, 1.05vw, 20px);
+            font-weight: 600;
+
+            a {
+                color: var(--white);
+
+                &:hover {
+                    color: var(--ul-black);
+                }
+            }
+        }
+
+        &-position {
+            margin-bottom: 0;
+            color: var(--white);
+            font-weight: 600;
+            font-size: clamp(12px, 0.74vw, 14px);
+        }
+    }
+}

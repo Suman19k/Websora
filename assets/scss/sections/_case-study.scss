@@ -1,0 +1,150 @@
+.ul-projects {
+    overflow: hidden;
+
+    &-container {
+        max-width: clamp(1200px, 84.66vw, 1611px);
+        margin: auto;
+
+        @include lg {
+            margin: 0 15px;
+        }
+    }
+
+    &-slider {
+        --shadow-space-x: 25px;
+        --shadow-space-y: 40px;
+        padding: var(--shadow-space-y) var(--shadow-space-x);
+        margin: calc(0% - var(--shadow-space-y)) calc(0% - var(--shadow-space-x));
+
+        .swiper-slide {
+            &.swiper-slide-visible {
+                .ul-projects-item::after {
+                    content: "";
+                }
+            }
+        }
+    }
+
+    &-item {
+        padding: clamp(15px, 1.05vw, 20px);
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+            .img img {
+                transform: scale(1.1);
+            }
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            background-color: var(--white);
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            clip-path: polygon(0% 4.098%, 0% 4.098%, 0.051% 3.434%, 0.197% 2.803%, 0.432% 2.215%, 0.746% 1.678%, 1.133% 1.2%, 1.584% 0.791%, 2.091% 0.457%, 2.646% 0.209%, 3.241% 0.054%, 3.868% 0%, 96.132% 0%, 96.132% 0%, 96.759% 0.054%, 97.354% 0.209%, 97.909% 0.457%, 98.416% 0.791%, 98.867% 1.2%, 99.254% 1.678%, 99.568% 2.215%, 99.803% 2.803%, 99.949% 3.434%, 100% 4.098%, 100% 79.452%, 100% 79.452%, 99.949% 80.116%, 99.803% 80.747%, 99.568% 81.335%, 99.254% 81.872%, 98.867% 82.35%, 98.416% 82.759%, 97.909% 83.093%, 97.354% 83.341%, 96.759% 83.496%, 96.132% 83.55%, 72.534% 83.55%, 72.534% 83.55%, 71.906% 83.604%, 71.311% 83.759%, 70.756% 84.007%, 70.249% 84.341%, 69.798% 84.75%, 69.412% 85.228%, 69.097% 85.765%, 68.863% 86.353%, 68.716% 86.984%, 68.665% 87.648%, 68.665% 95.902%, 68.665% 95.902%, 68.615% 96.566%, 68.468% 97.197%, 68.234% 97.785%, 67.919% 98.322%, 67.532% 98.8%, 67.082% 99.209%, 66.575% 99.543%, 66.02% 99.791%, 65.424% 99.946%, 64.797% 100%, 3.868% 100%, 3.868% 100%, 3.241% 99.946%, 2.646% 99.791%, 2.091% 99.543%, 1.584% 99.209%, 1.133% 98.8%, 0.746% 98.322%, 0.432% 97.785%, 0.197% 97.197%, 0.051% 96.566%, 0% 95.902%, 0% 4.098%);
+        }
+
+        &::after {
+            content: none;
+            background-color: rgba(0, 0, 0, 0.06);
+            inset: -4px;
+            top: 4px;
+            bottom: -4px;
+            filter: blur(13px);
+            clip-path: none;
+            z-index: -2;
+        }
+
+        .img {
+            margin-bottom: clamp(15px, 1.05vw, 20px);
+            overflow: hidden;
+            border-radius: 16px;
+
+            img {
+                width: 100%;
+                aspect-ratio: 477/362;
+            }
+        }
+
+        .txt {
+            max-width: 66%;
+        }
+
+        &-category {
+            display: inline-flex;
+            font-weight: 500;
+            color: var(--ul-primary);
+            background-color: #F5F6F7;
+            border-radius: 999px;
+            padding: 4px clamp(7px, 0.53vw, 10px);
+            margin-bottom: clamp(6px, 0.63vw, 12px);
+        }
+
+        &-title {
+            color: var(--ul-c4);
+            font-weight: 700;
+            font-size: clamp(20px, 1.26vw, 24px);
+        }
+
+        &-bottom {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            gap: clamp(8px, 0.84vw, 16px);
+
+            >* {
+                width: clamp(46px, 2.94vw, 56px);
+                aspect-ratio: 1/1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100px;
+                font-size: clamp(21px, 1.26vw, 24px);
+                font-weight: 500;
+            }
+        }
+
+        &-index {
+            background-color: var(--white);
+            color: var(--ul-primary);
+            box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        &-btn {
+            background-color: var(--ul-c4);
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 50%;
+                z-index: -1;
+                opacity: 0;
+                transition: 0.4s ease;
+                background: linear-gradient(0deg, #3C72FC 0%, #C700B1 100%);
+                transform: rotate(180deg);
+            }
+
+            &:hover {
+                background-color: var(--ul-primary);
+                color: var(--white);
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.ul-inner-projects-item {
+    &::after {
+        content: "";
+    }
+}
