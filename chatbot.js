@@ -481,161 +481,161 @@ function handleUserSelection(input) {
 
   switch (text) {
 
-    case "greeting":
-      reply = "Hello 👋\n\nWelcome to Websora.\n\nWe specialize in building websites, marketing strategies, engineering projects, and data-driven solutions.\n\nHow can I assist you today?";
-      followUps = ["Website Development", "SEO Services", "Digital Marketing", "Business Analytics", "Engineering Projects", "Pricing"];
-      break;
+  case "greeting":
+    reply = "Hello 👋\n\nWelcome to Websora.\n\nWe specialize in high-performance websites, digital marketing, engineering solutions, and data-driven strategies.\n\nHow can we assist you today?";
+    followUps = ["Website Development", "SEO Services", "Digital Marketing", "Business Analytics", "Engineering Projects", "Pricing"];
+    break;
 
-    case "website development":
-      reply = "Great choice 👍\n\nA well-designed website builds credibility and attracts the right audience.\n\nWhat type of website are you looking to create?";
-      followUps = ["Business Website", "E-commerce Website", "Portfolio Website"];
-      break;
+  case "website development":
+    reply = "Great choice 👍\n\nA professionally built website strengthens your brand presence and attracts the right audience.\n\nWhat type of website would you like to create?";
+    followUps = ["Business Website", "E-commerce Website", "Portfolio Website"];
+    break;
 
-    case "business website":
-      reply = "Excellent decision 💼\n\nA business website helps establish trust and generate quality leads.\n\nIs this for a new venture or an existing business?";
-      followUps = ["New Business", "Existing Business", "Features", "Pricing"];
-      break;
+  case "business website":
+    reply = "Excellent decision 💼\n\nA business website helps establish credibility and generate high-quality leads.\n\nIs this for a new venture or an existing business?";
+    followUps = ["New Business", "Existing Business", "Features", "Pricing"];
+    break;
 
-    case "e-commerce website":
-      reply = "Fantastic choice 🚀\n\nWe create fully functional online stores tailored for performance and conversions.\n\nApproximately how many products are you planning to list?";
-      followUps = ["Less than 50", "50-200", "200+", "Payment Integration", "Pricing"];
-      break;
+  case "e-commerce website":
+    reply = "Great choice 🚀\n\nWe build secure, scalable e-commerce platforms optimized for performance and conversions.\n\nHow many products are you planning to list?";
+    followUps = ["Less than 50", "50-200", "200+", "Payment Integration", "Pricing"];
+    break;
 
-    case "portfolio website":
-      reply = "Great decision 👌\n\nA strong portfolio helps you showcase your work and stand out professionally.\n\nWhat is your primary goal?";
-      followUps = ["Jobs", "Freelancing", "Personal Brand", "Design Options", "Pricing"];
-      break;
+  case "portfolio website":
+    reply = "Nice choice 👌\n\nA well-designed portfolio helps you stand out and showcase your work effectively.\n\nWhat is your primary goal?";
+    followUps = ["Jobs", "Freelancing", "Personal Brand", "Design Options", "Pricing"];
+    break;
 
-    case "new business":
-    case "existing business":
-      reply = "Understood 👍\n\nWe’ll design your website with a strong focus on conversions and user engagement.\n\nWould you like to explore features or pricing?";
-      followUps = ["Features", "Pricing"];
-      break;
+  case "new business":
+  case "existing business":
+    reply = "Got it 👍\n\nWe’ll design your website with a strong focus on conversions, user experience, and scalability.\n\nWould you like to explore features or pricing?";
+    followUps = ["Features", "Pricing"];
+    break;
 
-    case "less than 50":
-    case "50-200":
-    case "200+":
-      reply = "Perfect 👍\n\nWe’ll structure your store for smooth performance and scalability.\n\nWhat would you like to explore next?";
-      followUps = ["Payment Integration", "Pricing"];
-      break;
+  case "less than 50":
+  case "50-200":
+  case "200+":
+    reply = "Perfect 👍\n\nWe’ll structure your e-commerce platform for smooth performance, scalability, and seamless user experience.\n\nWhat would you like to explore next?";
+    followUps = ["Payment Integration", "Pricing"];
+    break;
 
-    case "jobs":
-    case "freelancing":
-    case "personal brand":
-      reply = "That’s great 👍\n\nWe’ll tailor the design to align perfectly with your goals.\n\nWhat would you like to explore next?";
-      followUps = ["Design Options", "Pricing"];
-      break;
+  case "jobs":
+  case "freelancing":
+  case "personal brand":
+    reply = "That’s great 👍\n\nWe’ll tailor the design to align with your goals and create a strong professional impact.\n\nWhat would you like to explore next?";
+    followUps = ["Design Options", "Pricing"];
+    break;
 
-    case "features":
-      reply = "Here’s what we typically include:\n\n✔ Modern and clean UI\n✔ Fully responsive design\n✔ SEO-friendly structure\n✔ Fast and secure performance\n\nWhat would you like to explore next?";
-      followUps = ["Timeline", "Pricing"];
-      break;
+  case "features":
+    reply = "Here’s what we include in our websites:\n\n✔ Modern & premium UI/UX design\n✔ Fully responsive across all devices\n✔ SEO-optimized structure\n✔ Fast, secure, and scalable performance\n\nWhat would you like to explore next?";
+    followUps = ["Timeline", "Pricing"];
+    break;
 
-    case "timeline":
-      reply = "• Basic Website → 5–7 days\n• Advanced Website → 1–3 weeks\n\nDo you have a specific deadline in mind?";
-      followUps = ["Yes, urgent", "No rush", "Pricing"];
-      break;
+  case "timeline":
+    reply = "Typical timelines:\n\n• Basic Website → 5–7 days\n• Advanced Website → 1–3 weeks\n\nDo you have a specific deadline?";
+    followUps = ["Yes, urgent", "No rush", "Pricing"];
+    break;
 
-    case "yes, urgent":
-      reply = "No problem ⚡\n\nWe can fast-track your project based on your timeline.\n\nLet’s connect and discuss the details.";
-      followUps = ["Contact Expert"];
-      isFinalStep = true;
-      break;
+  case "yes, urgent":
+    reply = "No problem ⚡\n\nWe can fast-track your project based on your deadline.\n\nLet’s connect and finalize the details.";
+    followUps = ["Contact Expert"];
+    isFinalStep = true;
+    break;
 
-    case "no rush":
-      reply = "Perfect 👍\n\nWe’ll focus on delivering the best quality without rushing.\n\nWhat would you like to explore next?";
-      followUps = ["Pricing", "Features"];
-      break;
+  case "no rush":
+    reply = "Perfect 👍\n\nWe’ll focus on delivering high-quality results with proper planning and execution.\n\nWhat would you like to explore next?";
+    followUps = ["Pricing", "Features"];
+    break;
 
-    case "payment integration":
-      reply = "We integrate secure payment gateways like Razorpay, Stripe, and PayPal for seamless transactions.\n\nWhat would you like to explore next?";
-      followUps = ["Features", "Pricing"];
-      break;
+  case "payment integration":
+    reply = "We integrate secure payment gateways such as Razorpay, Stripe, and PayPal to ensure smooth and reliable transactions.\n\nWhat would you like to explore next?";
+    followUps = ["Features", "Pricing"];
+    break;
 
-    case "design options":
-      reply = "We offer both fully custom designs and premium template-based solutions, depending on your needs.\n\nWhat would you like to explore next?";
-      followUps = ["SEO Setup", "Pricing"];
-      break;
+  case "design options":
+    reply = "We offer both fully custom designs and premium template-based solutions tailored to your business needs and budget.\n\nWhat would you like to explore next?";
+    followUps = ["SEO Setup", "Pricing"];
+    break;
 
-    case "seo setup":
-      reply = "We handle complete SEO setup, including meta tags, search engine indexing, and sitemap configuration.\n\nWhat would you like to explore next?";
-      followUps = ["SEO Services", "Pricing"];
-      break;
+  case "seo setup":
+    reply = "We implement complete SEO setup including meta optimization, sitemap configuration, indexing, and performance improvements.\n\nWhat would you like to explore next?";
+    followUps = ["SEO Services", "Pricing"];
+    break;
 
-    case "seo services":
-      reply = "SEO helps improve your visibility and rankings 📈\n\nWhich type of SEO service are you interested in?";
-      followUps = ["On-page SEO", "Off-page SEO", "Technical SEO"];
-      break;
+  case "seo services":
+    reply = "SEO helps improve your Google rankings and increase organic traffic 📈\n\nWhich area would you like to focus on?";
+    followUps = ["On-page SEO", "Off-page SEO", "Technical SEO"];
+    break;
 
-    case "on-page seo":
-    case "off-page seo":
-    case "technical seo":
-      reply = "We handle this with proven strategies and industry best practices.\n\nLet’s connect to discuss your requirements in detail.";
-      followUps = ["Contact Expert"];
-      isFinalStep = true;
-      break;
+  case "on-page seo":
+  case "off-page seo":
+  case "technical seo":
+    reply = "We handle this using proven strategies and industry best practices to deliver measurable results.\n\nLet’s connect to discuss your requirements in detail.";
+    followUps = ["Contact Expert"];
+    isFinalStep = true;
+    break;
 
-    case "digital marketing":
-      reply = "Let’s grow your brand 📢\n\nWhich area would you like to focus on?";
-      followUps = ["Social Media Marketing", "Paid Ads (PPC)", "Content Marketing"];
-      break;
+  case "digital marketing":
+    reply = "Let’s grow your brand 📢\n\nWhich area are you interested in?";
+    followUps = ["Social Media Marketing", "Paid Ads (PPC)", "Content Marketing"];
+    break;
 
-    case "social media marketing":
-    case "paid ads (ppc)":
-    case "content marketing":
-      reply = "We create targeted strategies designed to deliver real results 🎯\n\nLet’s connect and plan this out.";
-      followUps = ["Contact Expert"];
-      isFinalStep = true;
-      break;
+  case "social media marketing":
+  case "paid ads (ppc)":
+  case "content marketing":
+    reply = "We create data-driven marketing strategies designed to generate leads and maximize ROI 🎯\n\nLet’s connect and plan your campaign.";
+    followUps = ["Contact Expert"];
+    isFinalStep = true;
+    break;
 
-    case "engineering projects":
-      reply = "We assist with academic and technical projects 🎓\n\nWhat type of support are you looking for?";
-      followUps = ["Final Year Project", "Mini Project", "Project Guidance"];
-      break;
+  case "engineering projects":
+    reply = "We provide complete support for academic and technical projects 🎓\n\nWhat type of assistance do you need?";
+    followUps = ["Final Year Project", "Mini Project", "Project Guidance"];
+    break;
 
-    case "final year project":
-    case "mini project":
-    case "project guidance":
-    case "idea selection":
-    case "documentation":
-    case "topics":
-      reply = "We’ll guide you through every step 💯\n\nIt’s best to connect with our expert team for detailed support.";
-      followUps = ["Contact Expert"];
-      isFinalStep = true;
-      break;
+  case "final year project":
+  case "mini project":
+  case "project guidance":
+  case "idea selection":
+  case "documentation":
+  case "topics":
+    reply = "We’ll guide you through the entire process — from idea selection to final implementation 💯\n\nLet’s connect with our expert team for detailed support.";
+    followUps = ["Contact Expert"];
+    isFinalStep = true;
+    break;
 
-    case "business analytics":
-      reply = "We provide data-driven insights to support smarter decisions 📊\n\nWhat would you like to explore?";
-      followUps = ["Dashboard Development", "Data Analysis", "Reporting & Insights"];
-      break;
+  case "business analytics":
+    reply = "We provide data-driven insights to help you make smarter business decisions 📊\n\nWhat would you like to explore?";
+    followUps = ["Dashboard Development", "Data Analysis", "Reporting & Insights"];
+    break;
 
-    case "dashboard development":
-      reply = "We build interactive dashboards that make data easy to understand 📈\n\nWhat would you like to explore next?";
-      followUps = ["Pricing", "Contact Expert"];
-      break;
+  case "dashboard development":
+    reply = "We build interactive dashboards that simplify complex data and provide actionable insights 📈\n\nWhat would you like to explore next?";
+    followUps = ["Pricing", "Contact Expert"];
+    break;
 
-    case "data analysis":
-    case "reporting & insights":
-      reply = "We deliver meaningful insights that help improve performance and strategy.\n\nLet’s connect to discuss your requirements.";
-      followUps = ["Contact Expert"];
-      isFinalStep = true;
-      break;
+  case "data analysis":
+  case "reporting & insights":
+    reply = "We deliver meaningful insights that help optimize performance and improve business strategy.\n\nLet’s connect to discuss your requirements.";
+    followUps = ["Contact Expert"];
+    isFinalStep = true;
+    break;
 
-    case "pricing":
-      reply = "Pricing depends on your specific requirements and project scope.\n\nLet’s connect to provide you with an accurate quote.";
-      followUps = ["Contact Expert"];
-      isFinalStep = true;
-      break;
+  case "pricing":
+    reply = "Our pricing is flexible and depends on your specific requirements, features, and project scope.\n\nLet’s connect to provide you with an accurate quote.";
+    followUps = ["Contact Expert"];
+    isFinalStep = true;
+    break;
 
-    case "contact expert":
-      reply = "📞 +91 7892964739\n📧 info@Websora.in\n\nOur team will guide you through the next steps.";
-      isFinalStep = true;
-      break;
+  case "contact expert":
+    reply = "📞 +91 7892964739\n📧 info@Websora.in\n\nOur team will connect with you shortly to assist further.";
+    isFinalStep = true;
+    break;
 
-    default:
-      reply = "I may not have fully understood your request.\n\nPlease connect with our expert team for further assistance.";
-      followUps = ["Contact Expert"];
-      isFinalStep = true;
+  default:
+    reply = "I may not have fully understood your request.\n\nPlease connect with our expert team for further assistance.";
+    followUps = ["Contact Expert"];
+    isFinalStep = true;
 }
   addMessage(reply, "bot").then(() => {
 
