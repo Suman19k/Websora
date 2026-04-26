@@ -737,3 +737,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+  const scrollPercent = (scrollTop / docHeight) * 100;
+
+  const btn = document.querySelector(".back-to-top");
+
+  btn.style.background = `conic-gradient(
+    #9333ea ${scrollPercent}%,
+    #e5e7eb ${scrollPercent}%
+  )`;
+});
