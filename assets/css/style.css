@@ -2314,7 +2314,7 @@ button {
   position: absolute;
   top: clamp(26px, 2.94vw, 56px);
   right: clamp(17px, 1.94vw, 37px);
-  background-color: #0719B9;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
   color: var(--white);
   width: clamp(64px, 4.41vw, 84px);
   aspect-ratio: 1/1;
