@@ -186,21 +186,7 @@
     --error-color: #E63946;
 }
 
-html,
-body {
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100%;
-}
-.homepage {
-    overflow-x: hidden;
-}
 
-.homepage .back-to-top,
-.homepage #chatbot-root,
-.homepage .chatbot-button {
-    right: 20px !important;
-}
 
 /* ================== 03. Keyframes Animations ================== */
 
@@ -3751,9 +3737,11 @@ body.lightmode .newsletter-layout {
 }
 
 .chooseus-content {
-    padding: 30px 30px 30px 30px;
+    padding: 30px;
     display: flex;
-    width: 515px;
+    flex: 1;           /* takes remaining space */
+    width: auto;       /* remove fixed width */
+    min-width: 0;      /* prevents text overflow */
     flex-direction: column;
     justify-content: space-between;
     gap: 1em;
@@ -3816,7 +3804,22 @@ body.lightmode .newsletter-layout {
 .card-chooseus-cta:hover {
     box-shadow: var(--box-shadow-top-left);
 }
+@media (max-width:768px){
 
+    .card-chooseus{
+        flex-direction: column;
+    }
+
+    .chooseus-icon-wrapper{
+        width: 100%;
+        min-height: auto;
+        align-items: center;
+    }
+
+    .chooseus-content{
+        width:100%;
+    }
+}
 /* ================== 46. Image Container Components ================== */
 
 .image-container {
@@ -7239,7 +7242,10 @@ body.lightmode .cta-service-banner::before {
 Premium Testimonials Section
 =================================== */
 
-/* Background glow */
+.premium-testimonials{
+    position: relative;
+    overflow: hidden;
+}
 
 .premium-testimonials::before {
     content: "";
@@ -7758,4 +7764,18 @@ Responsive
 
     }
 
+}
+@media(max-width:768px){
+
+    .premium-testimonials::before{
+        width:250px;
+        height:250px;
+        left:-80px;
+    }
+
+    .premium-testimonials::after{
+        width:250px;
+        height:250px;
+        right:-80px;
+    }
 }
