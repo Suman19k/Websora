@@ -7254,8 +7254,6 @@ Premium Testimonials Section
     height: 500px;
     top: -200px;
     left: -100px;
-    background: radial-gradient(rgba(200, 42, 239, .15),
-            transparent);
     filter: blur(100px);
     z-index: 1;
 }
@@ -7267,8 +7265,6 @@ Premium Testimonials Section
     height: 400px;
     bottom: -200px;
     right: -100px;
-    background: radial-gradient(rgba(147, 51, 234, .12),
-            transparent);
     filter: blur(100px);
     z-index: 1;
 }
@@ -7321,7 +7317,7 @@ Sidebar
 
 .sidebar-header span {
     font-size: 14px;
-    color: #777;
+    color: #000000;
 }
 
 
@@ -7778,4 +7774,480 @@ Responsive
         height:250px;
         right:-80px;
     }
+}
+
+/* ================= PRIVACY POLICY ================= */
+
+.privacy-section{
+
+    background:#faf8ff;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+/* Background glow */
+
+.privacy-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    top:-250px;
+
+    left:-200px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        rgba(200,42,239,.12),
+        transparent
+    );
+
+    filter:blur(80px);
+
+    z-index:0;
+}
+
+
+.privacy-section .container{
+
+    position:relative;
+
+    z-index:2;
+}
+
+
+/* Last updated text */
+
+.privacy-section .text-muted{
+
+    font-size:15px;
+
+    color:#777 !important;
+}
+
+
+/* Cards */
+
+.privacy-card{
+
+    background:#fff;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    margin-bottom:25px;
+
+    border:1px solid rgba(200,42,239,.12);
+
+    box-shadow:
+    0 10px 35px rgba(200,42,239,.08);
+
+    transition:.4s ease;
+}
+
+
+.privacy-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 20px 50px rgba(200,42,239,.15);
+}
+
+
+/* Heading */
+
+.privacy-card h5{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    color:#222;
+
+    position:relative;
+}
+
+
+.privacy-card h5::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:50px;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        #c82aef,
+        #ff4da6
+    );
+}
+
+
+/* Paragraph */
+
+.privacy-card p{
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:#666;
+
+    margin-bottom:0;
+}
+
+
+/* List */
+
+.privacy-card ul{
+
+    padding-left:0;
+
+    margin-top:15px;
+
+    list-style:none;
+}
+
+
+.privacy-card ul li{
+
+    position:relative;
+
+    padding-left:30px;
+
+    margin-bottom:12px;
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+
+.privacy-card ul li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    color:#c82aef;
+
+    font-weight:700;
+}
+
+
+/* Contact section */
+
+.privacy-card strong{
+
+    color:#222;
+}
+
+
+/* ================= TABLET ================= */
+
+@media(max-width:991px){
+
+.privacy-card{
+
+    padding:30px;
+}
+
+.privacy-card h5{
+
+    font-size:22px;
+}
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.privacy-card{
+
+    padding:25px;
+
+    border-radius:20px;
+}
+
+.privacy-card h5{
+
+    font-size:20px;
+}
+
+.privacy-card p{
+
+    font-size:15px;
+}
+
+.privacy-card ul li{
+
+    font-size:15px;
+}
+
+}
+
+/* ================= TERMS & CONDITIONS ================= */
+
+.terms-section{
+
+    background:#faf8ff;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+/* Background glow */
+
+.terms-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    top:-250px;
+
+    right:-200px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        rgba(200,42,239,.12),
+        transparent
+    );
+
+    filter:blur(80px);
+
+    z-index:0;
+}
+
+
+.terms-section .container{
+
+    position:relative;
+
+    z-index:2;
+}
+
+
+/* Last updated */
+
+.terms-section .text-muted{
+
+    font-size:15px;
+
+    color:#777 !important;
+}
+
+
+/* Card */
+
+.terms-card{
+
+    background:#fff;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    margin-bottom:25px;
+
+    border:1px solid rgba(200,42,239,.12);
+
+    box-shadow:
+    0 10px 35px rgba(200,42,239,.08);
+
+    transition:.4s ease;
+}
+
+
+.terms-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 20px 50px rgba(200,42,239,.15);
+}
+
+
+/* Heading */
+
+.terms-card h5{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    color:#222;
+
+    position:relative;
+}
+
+
+.terms-card h5::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:50px;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        #c82aef,
+        #ff4da6
+    );
+}
+
+
+/* Text */
+
+.terms-card p{
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:#666;
+
+    margin-bottom:0;
+}
+
+
+/* Lists */
+
+.terms-card ul{
+
+    list-style:none;
+
+    padding-left:0;
+
+    margin-top:15px;
+}
+
+
+.terms-card ul li{
+
+    position:relative;
+
+    padding-left:30px;
+
+    margin-bottom:12px;
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+
+.terms-card ul li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    color:#c82aef;
+
+    font-weight:700;
+}
+
+
+/* Strong text */
+
+.terms-card strong{
+
+    color:#222;
+}
+
+
+/* ================= TABLET ================= */
+
+@media(max-width:991px){
+
+.terms-card{
+
+    padding:30px;
+}
+
+.terms-card h5{
+
+    font-size:22px;
+}
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.terms-card{
+
+    padding:25px;
+
+    border-radius:20px;
+}
+
+.terms-card h5{
+
+    font-size:20px;
+}
+
+.terms-card p{
+
+    font-size:15px;
+}
+
+.terms-card ul li{
+
+    font-size:15px;
+}
+
 }
