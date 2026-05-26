@@ -192,6 +192,15 @@ body {
     width: 100%;
     max-width: 100%;
 }
+.homepage {
+    overflow-x: hidden;
+}
+
+.homepage .back-to-top,
+.homepage #chatbot-root,
+.homepage .chatbot-button {
+    right: 20px !important;
+}
 
 /* ================== 03. Keyframes Animations ================== */
 

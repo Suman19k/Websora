@@ -1,17 +1,22 @@
+const basePath = window.location.pathname
+    .split("/")
+    .slice(0, 2)
+    .join("/") + "/";
+
 Promise.all([
-    fetch("./header.html").then(res => res.text()),
-    fetch("./footer.html").then(res => res.text()),
-    fetch("./sidebar.html").then(res => res.text()),
-    fetch("./search-form.html").then(res => res.text())
-  ])
-  .then(([headerHTML, footerHTML, sidebarHTML, searchHTML]) => {
+    fetch(basePath + "header.html").then(res => res.text()),
+    fetch(basePath + "footer.html").then(res => res.text()),
+    fetch(basePath + "sidebar.html").then(res => res.text()),
+    fetch(basePath + "search-form.html").then(res => res.text())
+])
+.then(([headerHTML, footerHTML, sidebarHTML, searchHTML]) => {
     $("#header").html(headerHTML);
     $("#footer").html(footerHTML);
     $("#sidebar").html(sidebarHTML);
     $("#edit-sidebar").html(sidebarHTML);
     $("#search-form-container").html(searchHTML);
-  })
-  .then(() => {
+})
+.then(() => {
     initBannerVideo();
     initNavLink();
     initSidebar();
@@ -21,7 +26,10 @@ Promise.all([
     initSubmitContact();
     initSubmitNewsletter();
     initAnimateData();
-  });
+})
+.catch(error => {
+    console.log("Loading error:", error);
+});
       
 function initBannerVideo() {
     var player;
