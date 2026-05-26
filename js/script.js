@@ -1,13 +1,26 @@
 const basePath = window.location.pathname
-    .split("/")
-    .slice(0, 2)
-    .join("/") + "/";
+  .substring(
+      0,
+      window.location.pathname.lastIndexOf("/") + 1
+  );
 
 Promise.all([
-    fetch(basePath + "header.html").then(res => res.text()),
-    fetch(basePath + "footer.html").then(res => res.text()),
-    fetch(basePath + "sidebar.html").then(res => res.text()),
-    fetch(basePath + "search-form.html").then(res => res.text())
+    fetch(basePath + "header.html").then(res => {
+        if (!res.ok) throw new Error("Header not found");
+        return res.text();
+    }),
+    fetch(basePath + "footer.html").then(res => {
+        if (!res.ok) throw new Error("Footer not found");
+        return res.text();
+    }),
+    fetch(basePath + "sidebar.html").then(res => {
+        if (!res.ok) throw new Error("Sidebar not found");
+        return res.text();
+    }),
+    fetch(basePath + "search-form.html").then(res => {
+        if (!res.ok) throw new Error("Search form not found");
+        return res.text();
+    })
 ])
 .then(([headerHTML, footerHTML, sidebarHTML, searchHTML]) => {
     $("#header").html(headerHTML);
@@ -15,8 +28,7 @@ Promise.all([
     $("#sidebar").html(sidebarHTML);
     $("#edit-sidebar").html(sidebarHTML);
     $("#search-form-container").html(searchHTML);
-})
-.then(() => {
+
     initBannerVideo();
     initNavLink();
     initSidebar();
@@ -27,9 +39,7 @@ Promise.all([
     initSubmitNewsletter();
     initAnimateData();
 })
-.catch(error => {
-    console.log("Loading error:", error);
-});
+.catch(error => console.log(error));
       
 function initBannerVideo() {
     var player;
