@@ -740,9 +740,6 @@
 .fa-less:before {
   content: "\f41d"; }
 
-.fa-blogger-b:before {
-  content: "\f37d"; }
-
 .fa-opencart:before {
   content: "\f23d"; }
 
@@ -889,9 +886,6 @@
 
 .fa-cuttlefish:before {
   content: "\f38c"; }
-
-.fa-blogger:before {
-  content: "\f37c"; }
 
 .fa-flickr:before {
   content: "\f16e"; }
@@ -1126,9 +1120,6 @@
 
 .fa-d-and-d:before {
   content: "\f38d"; }
-
-.fa-microblog:before {
-  content: "\e01a"; }
 
 .fa-cc-diners-club:before {
   content: "\f24c"; }

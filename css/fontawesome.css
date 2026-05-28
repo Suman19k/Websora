@@ -704,9 +704,6 @@ readers do not read off random characters that represent icons */
 .fa-sheet-plastic {
   --fa: "\e571"; }
 
-.fa-blog {
-  --fa: "\f781"; }
-
 .fa-user-ninja {
   --fa: "\f504"; }
 
