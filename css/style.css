@@ -2457,7 +2457,7 @@ body.lightmode .card-partner {
 
 /* ================== 29. Case Studies Components ================== */
 
-.case-studies-layout {
+.projects-layout {
     display: flex;
     flex-direction: column;
     padding: 2px 2px 0px 2px;
@@ -2467,7 +2467,7 @@ body.lightmode .card-partner {
     z-index: 1;
 }
 
-.case-studies-layout::before {
+.projects-layout::before {
     content: '';
     position: absolute;
     background-color: var(--accent-transparent);
@@ -2480,7 +2480,7 @@ body.lightmode .card-partner {
     z-index: -1;
 }
 
-.case-studies-layout .spacer {
+.projects-layout .spacer {
     align-self: center;
     width: 80%;
     height: 3px;
@@ -2488,7 +2488,7 @@ body.lightmode .card-partner {
     background-image: radial-gradient(at center center, var(--accent-color-6) 0%, var(--accent-transparent) 70%);
 }
 
-.card-case-studies {
+.card-projects {
     display: flex;
     flex-direction: column;
     gap: 50px 50px;
@@ -2500,7 +2500,7 @@ body.lightmode .card-partner {
     z-index: 1;
 }
 
-body.lightmode .card-case-studies {
+body.lightmode .card-projects {
     background-color: var(--accent-color-4);
 }
 
@@ -2528,6 +2528,10 @@ body.lightmode .card-case-studies {
 
 .project-content {
     padding-top: 20px;
+}
+
+.project-category {
+    font-weight: 700;
 }
 
 .live-badge {
@@ -4616,14 +4620,14 @@ body.lightmode .cta-service-banner::before {
         width: 80%;
     }
 
-    .card-case-studies {
+    .card-projects {
         padding: 30px 30px 30px 30px;
     }
 
-    .case-studies-content.local-business,
-    .case-studies-content.saas-leads,
-    .case-studies-content.ecommerce,
-    .case-studies-content.startup-branding {
+    .projects-content.local-business,
+    .projects-content.saas-leads,
+    .projects-content.ecommerce,
+    .projects-content.startup-branding {
         width: 100%;
     }
 
@@ -4943,7 +4947,7 @@ body.lightmode .cta-service-banner::before {
         font-size: var(--font-size-xs);
     }
 
-    .card-case-studies {
+    .card-projects {
         padding: 30px 20px 30px 20px;
     }
 
@@ -5101,8 +5105,8 @@ body.lightmode .cta-service-banner::before {
         width: 74%;
     }
 
-    .case-studies-component.large,
-    .case-studies-component.small {
+    .projects-component.large,
+    .projects-component.small {
         width: 100%;
     }
 
@@ -5298,16 +5302,15 @@ body.lightmode .cta-service-banner::before {
 }
 
 .sidebar-header .company-name {
-    font-size: 24px;
+    font-size: 28px;
     margin: 0;
     line-height: 1;
 }
 
 .sidebar-header .tagline {
-    font-size: 10px;
-    margin: 0;
-    color: var(--accent-color);
-    line-height: 1;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        margin-left: 26px;
 }
 
 /* ================= CAROUSEL ================= */
