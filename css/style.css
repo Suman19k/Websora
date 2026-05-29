@@ -7861,3 +7861,13 @@ Responsive
 }
 
 }
+/* Mobile only */
+@media (max-width: 767px) {
+    .enterprise-package {
+        order: 3;
+    }
+
+    .growth-package {
+        order: 2;
+    }
+}
